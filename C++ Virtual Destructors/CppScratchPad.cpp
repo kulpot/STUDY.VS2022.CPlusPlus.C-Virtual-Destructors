@@ -29,7 +29,10 @@ struct Derived : public Base
 int main()
 {
 	//Derived derived;
-	Derived* derived = new Derived;			// derived instance put on the heap by using pointer
+
+						//C++ common bug - "new Derived" is a memory leak
+	Derived* derived = new Derived;			// derived instance put on the heap by using pointer	//output: constructor only
+	delete derived;		//for memory leak - free the memory on the heap	// output: constructor and destructor
 }
 
 
