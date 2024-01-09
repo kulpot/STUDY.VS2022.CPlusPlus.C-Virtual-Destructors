@@ -31,8 +31,10 @@ int main()
 	//Derived derived;
 
 						//C++ common bug - "new Derived" is a memory leak
-	Derived* derived = new Derived;			// derived instance put on the heap by using pointer	//output: constructor only
-	delete derived;		//for memory leak - free the memory on the heap	// output: constructor and destructor
+	//Derived* derived = new Derived;			// derived instance put on the heap by using pointer	//output: constructor only
+	//delete derived;		//for memory leak - free the memory on the heap	// output: constructor and destructor
+	Base* base = new Derived;	// Base pointer compile time type , = new Derived is Derived runtime type
+	delete base;
 }
 
 
