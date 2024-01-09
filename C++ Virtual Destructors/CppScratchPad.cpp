@@ -9,8 +9,20 @@ using namespace std;
 // --------------------------- C++ Virtual Destructors ----------------------------------------------
 //ref link:https://www.youtube.com/watch?v=pZXdG6LtTcE&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=23
 
+struct Base
+{
+	Base() { cout << "Base()" << endl; }
+};
 
+struct Derived : public Base
+{
+	Derived() { cout << "Derived()" << endl; }
+};
 
+int main()
+{
+
+}
 
 
 
