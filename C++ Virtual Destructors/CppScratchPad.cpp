@@ -17,7 +17,8 @@ using namespace std;
 struct Base
 {
 	Base() { cout << "Base()" << endl; }
-	~Base() { cout << "~Base()" << endl; }
+	//~Base() { cout << "~Base()" << endl; }
+	virtual ~Base() { cout << "~Base()" << endl; }	// virtual for the ~Derived() to instantiate
 };
 
 struct Derived : public Base
@@ -33,7 +34,7 @@ int main()
 						//C++ common bug - "new Derived" is a memory leak
 	//Derived* derived = new Derived;			// derived instance put on the heap by using pointer	//output: constructor only
 	//delete derived;		//for memory leak - free the memory on the heap	// output: constructor and destructor
-	Base* base = new Derived;	// Base pointer compile time type , = new Derived is Derived runtime type
+	Base* base = new Derived;	// Base pointer compile time type , = new Derived is Derived runtime type		//output: constructor for both but destructor only for Base
 	delete base;
 }
 
