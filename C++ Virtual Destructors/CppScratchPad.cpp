@@ -28,7 +28,8 @@ struct Derived : public Base
 
 int main()
 {
-	Derived derived;
+	//Derived derived;
+	Derived* derived = new Derived;			// derived instance put on the heap by using pointer
 }
 
 
