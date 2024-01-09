@@ -12,6 +12,7 @@ using namespace std;
 // Virtual Destructors - important for cleanup purposes
 // ~tilde for Destructor syntax 
 // in C# its called finalizer except its not executed deterministically meaning dont know when/how/why it(the ~ syntax) executed
+// pointer takes up 4bytes of ram
 //---------------------------------
 
 struct Base
